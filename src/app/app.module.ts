@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
-//import { HeaderComponent } from './header/header.component';
+import { AppFooterComponent } from './app-footer/app-footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { AppHeaderComponent } from './app-header/app-header.component';
     ProductComponent,
     ProductDetailsComponent,
     AppHeaderComponent,
-    //HeaderComponent
+    AppFooterComponent
   ],
   imports: [
     BrowserModule,
