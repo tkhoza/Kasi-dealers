@@ -25,6 +25,17 @@ export class AuthService {
     }
   }
 
+  register(user: User) {
+    if (user.email !== '' && user.password !== '' && user.firstName !== '' && user.lastName !== '') {
+      // Verify if response is valid ???
+      return this.http.post<User>(this.api_url +'/createUser', user)
+        .pipe(
+          tap(this.setSession),
+          shareReplay()
+        );
+    }
+  }
+
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('expires_at');
