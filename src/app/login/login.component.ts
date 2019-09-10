@@ -30,13 +30,10 @@ export class LoginComponent implements OnInit {
   }
   login() {
       const val = this.form.value;
-      console.log(this.user);
 
     if (val.email && val.password) {
         this.user.email = val.email.toString();
         this.user.password = val.password.toString();
-        console.log(this.user.email);
-        console.log(this.user.password);
     }
 
       this.authService.login(this.user)

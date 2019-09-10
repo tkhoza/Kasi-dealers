@@ -8,13 +8,16 @@ import { User } from '../Models/user';
   providedIn: 'root'
 })
 export class AuthService {
+
+  api_url = 'http://localhost:3000';
+
   constructor(private http: HttpClient) {
   }
 
   login(user: User) {
     if (user.email !== '' && user.password !== '') {
       // Verify if response is valid ???
-      return this.http.post<User>('/login', user)
+      return this.http.post<User>(this.api_url + '/login', user)
         .pipe(
           tap(this.setSession),
           shareReplay()
