@@ -11,6 +11,7 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductCommentsComponent } from './product-comments/product-comments.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductDetailsComponent,
     AppHeaderComponent,
     AppFooterComponent,
+    ProductCommentsComponent,
   ],
   imports: [
     BrowserModule,
