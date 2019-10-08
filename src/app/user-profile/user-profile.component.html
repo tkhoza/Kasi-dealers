@@ -1,0 +1,137 @@
+<div class="row"style="padding:1.5em;color:black">
+    <ul class="nav nav-tabs nav-justified md-tabs indigo" id="myTabJust" role="tablist">
+        <li class="nav-item">
+          <a style="width: max-content;" class="nav-link active" id="profile-tab-just" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just"
+            aria-selected="true">
+            <i class="fas fa-user pr-2"></i> Personal Details
+        </a>
+        </li>
+        <li class="nav-item">
+          <a  style="width: max-content;" class="nav-link" id="Product-tab-just" data-toggle="tab" href="#Product-just" role="tab" aria-controls="Product-just"
+            aria-selected="false">User Products
+         </a>
+        </li>
+      </ul>
+      <div class="tab-content card pt-5" id="myTabContentJust" style="width: -webkit-fill-available;background: #d9d9d9">
+        <div class="tab-pane fade show active" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
+           <div class="row">
+               <div class="col-md-2"></div>
+               <div class="col-md-8">
+                    <form class="probootstrap-form" style="border-radius: 4px;">
+                            <h4 class="text-center">Update Personal Details</h4>
+                            <hr/>
+                              <div class="form-group">
+                                <label for="firstName" class="mr-5" style="width: 100%;">
+                                  <input type="text" id="firstName" name="email"  class="form-control" placeholder="First Name" style="width: 100%;">
+                                </label>
+                              </div>
+                              <div class="form-group">
+                                <label for="lastName" class="mr-5" style="width: 100%;">
+                                  <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name" style="width: 100%;">
+                                </label>
+                              </div>
+                              <div class="form-group">
+                                <label for="phone" class="mr-5" style="width: 100%;">
+                                  <input type="text" id="phone" name="phone" class="form-control" placeholder="Cellphone Number" style="width: 100%;">
+                                </label>
+                              </div>
+                              <div class="form-group">
+                                <label for="email" class="mr-5" style="width: 100%;">
+                                  <input type="text" id="email" name="email"  class="form-control" placeholder="Email" style="width: 100%;">
+                                </label>
+                              </div>
+                         
+                              <hr/>
+                              <div class="form-group">
+                                <input type="submit" value="Save Changes" class="btn btn-primary btn-block">
+                              </div>
+                        </form>
+               </div>
+               <div class="col-md-2"></div>
+           </div>
+        </div>
+        <div class="tab-pane fade" id="Product-just" role="tabpanel" aria-labelledby="Product-tab-just">
+         
+            <div class="row"style="padding:1em;">
+                <div class="col-md-12">
+                    <hr>
+                    <h4 class="heading text-center " style="color:#fff;background: olivedrab;padding: 1em;">Products</h4>
+                    <hr>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-success mb-3 ">
+                        <div class="card-header">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1"> Cell Phone</h5>
+                                <small>3 days ago</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title text-center">Initial Price R4000.00</h6>
+                        </div>
+                        <img style="height: 200px; width: 100%; display: block;" src="assets/images/img_3.jpg" alt="Card image">
+                        <div class="card-footer text-center">
+                        <!--   <button  type="button" class="btn btn-outline-primary" >View Product</button> -->
+                        <a routerLink="/product-details" role="button" class="btn btn-outline-primary">View product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-success mb-3 ">
+                        <div class="card-header">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1"> Car</h5>
+                                <small>9 days ago</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title text-center">Initial Price R40000.00</h6>
+                        </div>
+                        <img style="height: 200px; width: 100%; display: block;" src="assets/images/img_3.jpg" alt="Card image">
+                        <div class="card-footer text-center">
+                            <a routerLink="/product-details" role="button" class="btn btn-outline-primary">View product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-success mb-3 ">
+                        <div class="card-header" >
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Suit</h5>
+                                <small>19 days ago</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title text-center">Initial Price R4000.00</h6>
+                        </div>
+                        <img style="height: 200px; width: 100%; display: block;" src="assets/images/img_3.jpg" alt="Card image">
+                        <div class="card-footer text-center">
+                            <a routerLink="/product-details" role="button" class="btn btn-outline-primary">View product</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-success mb-3 ">
+                        <div class="card-header">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1"> Bicycle</h5>
+                                <small>14 days ago</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title text-center">Initial Price R800.00</h6>
+                        </div>
+                        <img style="height: 200px; width: 100%; display: block;" src="assets/images/img_3.jpg" alt="Card image">
+                        <div class="card-footer text-center">
+                            <a routerLink="/product-details" role="button" class="btn btn-outline-primary">View product</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+      </div>    
+</div>
+
+
+

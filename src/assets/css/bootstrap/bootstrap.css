@@ -2711,7 +2711,7 @@ tbody.collapse.show {
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
     color: #495057;
-    background-color: #fff;
+    background-color:  #d9d9d9;
     border-color: #ddd #ddd #fff; }
   .nav-tabs .dropdown-menu {
     margin-top: -1px;
@@ -3079,7 +3079,8 @@ tbody.collapse.show {
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: white; }
+  color: white; 
+}
 
 .navbar-dark .navbar-toggler {
   color: rgba(255, 255, 255, 0.5);
