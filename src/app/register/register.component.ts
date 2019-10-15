@@ -3,6 +3,7 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { User } from '../Models/user';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-register',
@@ -16,6 +17,7 @@ export class RegisterComponent implements OnInit {
 
    constructor(private fb: FormBuilder,
               private authService: AuthService,
+              private notify: NotificationService,
               private router: Router) {
 
         this.form = this.fb.group({
@@ -42,8 +44,16 @@ export class RegisterComponent implements OnInit {
         this.user.phone = val.phone.toString();
     }
 
-    this.authService.register(this.user).subscribe(() => {
+    this.authService.register(this.user).subscribe( (data) => {
+      if(!data.user)
+      {
+        this.notify.error("Failed to register user");
+      }
+      else
+      {
+        this.notify.success("User was successfully registered");
         this.router.navigateByUrl('/');
+      }
     });
   }
 
