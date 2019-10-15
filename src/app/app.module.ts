@@ -13,6 +13,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductCommentsComponent } from './product-comments/product-comments.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+ import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -33,7 +36,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule, CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { User } from '../Models/user';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private authService: AuthService,
+              private notify: NotificationService,
               private router: Router) {
 
       this.form = this.fb.group({
@@ -38,9 +40,16 @@ export class LoginComponent implements OnInit {
 
       this.authService.login(this.user)
         .subscribe(
-          () => {
-            console.log('User is logged in');
-            this.router.navigateByUrl('/');
+          (data) => {
+            if(!data.user)
+            {
+              this.notify.error("Incorrect Username/Password");
+            }
+            else
+            {
+              this.notify.success("Successfully logged in");
+              this.router.navigateByUrl('/');
+            }
           });
     }
 }
